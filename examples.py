@@ -1,25 +1,6 @@
-# SDK Bill.pt Python
+from api import Api
+# Examples
 
-## Descrição
-
-Este SDK Python foi desenvolvido para auxiliar no desenvolvimento de integrações com a API do Bill.pt, um software de faturação certificado pela autoridade tributária em Portugal. A API permite a criação de vários tipos de documentos, incluindo faturas, recibos, notas de crédito, entre outros.
-
-## Documentação da API
-
-A documentação completa da API pode ser encontrada em [https://api.bill.pt](https://api.bill.pt).
-
-## Site Oficial
-
-Visite o [site oficial do Bill.pt](https://bill.pt) para obter mais informações sobre o software de faturação.
-
-## Exemplos
-Para instalar as dependencias faça npm install.
-
-Para obter uma de desenvolvimento contacte o suporte do bill.pt.
-
-Este repositório inclui uma série de exemplos que demonstram como usar o SDK para interagir com a API do Bill.pt. Os exemplos podem ser encontrados no diretório de exemplos.
-
-```python
 # Development
 api_client = Api(mode='dev')
 
@@ -27,7 +8,7 @@ api_client = Api(mode='dev')
 # api_client = Api(mode='app')
 
 # Set the token
-api_client.set_token('CHANGE_YOUR_TOKEN_HERE')
+api_client.set_token('KHo3hrxmtxyTkmX4XVIgaX4SwLRaWRJ8QZUBnOC4Wqth5Rgs5sXnGmxWENIybee7CVL9OZ4yYAbjBeMzaAWHRuCsDVPrPZKUhhvVNUGtzFkrRLpBiY5hfmz0lpFGfZYB')
 
 # Check the token
 response = api_client.valid_token()
@@ -218,23 +199,3 @@ response = api_client.convert_document_with_id({
     'convert_to': 'NC'
 })
 print(response)
-```
-
-## Instalação de Dependências
-
-Para executar este código, é necessário instalar algumas dependências Python. Você pode fazer isso facilmente usando o `pip`, o gerenciador de pacotes do Python.
-
-1. **requests**: Este módulo é utilizado para fazer requisições HTTP em Python. Para instalá-lo, execute o seguinte comando no terminal:
-
-   ```
-   pip install requests
-   ```
-
-2. **json**: O módulo `json` já faz parte da biblioteca padrão do Python, então você não precisa instalá-lo separadamente.
-
-3. **datetime**: Este é outro módulo da biblioteca padrão do Python, que é utilizado para trabalhar com objetos de data e hora. Você não precisa instalar nada adicional para usá-lo.
-
-Depois de instalar o módulo `requests`, você poderá importá-lo e usá-lo em seus scripts Python. Os módulos `json` e `datetime` já estão disponíveis para uso sem a necessidade de instalação adicional.
-
----
-
